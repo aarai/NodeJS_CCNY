@@ -31,6 +31,7 @@ module.exports = function (grunt) {
             tasks: ['babel'],
             options: {
               spawn: false,
+              livereload: true
             }
           },
           less: {
@@ -38,11 +39,23 @@ module.exports = function (grunt) {
             tasks: ['less'],
             options: {
               spawn: false,
+              livereload: true
             }
+          }
+        },
+        nodemon: {
+          dev: {
+            script: 'server.js',
+          }
+        },
+        concurrent: {
+          default: ['nodemon','babel','less','watch'],
+          options: {
+            logConcurrentOutput: true
           }
         }
   });
 
   // grunt.registerTask('default', ['babel','less']);
-  grunt.registerTask('default', ['babel','less','watch']);
+  grunt.registerTask('default', ['concurrent','nodemon','babel','less','watch']);
 }

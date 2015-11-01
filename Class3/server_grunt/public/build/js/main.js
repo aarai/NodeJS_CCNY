@@ -16,11 +16,17 @@ var Animal = (function () {
     value: function move(direction) {
       console.log('moved ' + direction);
     }
+  }, {
+    key: 'walk',
+    value: function walk(dir) {
+      this.move(dir);
+    }
   }]);
 
   return Animal;
 })();
 
 var animal = new Animal();
-animal.move('right');
+animal.walk('right');
+animal.walk('left');
 //# sourceMappingURL=main.js.map
