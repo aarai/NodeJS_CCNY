@@ -1,0 +1,7 @@
+{
+    "allowedExtensions":[".less"],
+    "defaults": {
+        "watchFolder": "public/src/less",
+        "outputFolder": "public/build/css"
+    }
+}
