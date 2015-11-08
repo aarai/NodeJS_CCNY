@@ -5,7 +5,7 @@ var gulp = require('gulp'),
   less = require('gulp-less');
 
 gulp.task('less', function () {
-  gulp.src('./public/css/*.less')
+  gulp.src('./public/less/*.less')
     .pipe(plumber())
     .pipe(less())
     .pipe(gulp.dest('./public/css'))
