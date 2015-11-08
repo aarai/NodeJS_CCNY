@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+  .row
+    .medium-12.columns
+      h1= title
+      p Welcome to #{title}
+
+  .row
+    .medium-12.columns
+      form(action='/articles/create', method='post')
+        .field
+          label(for='title') title:
+          input(type='text', name='title')
+        .field
+          label(for='text') text:
+          textarea(name='text')
+        .field
+          label(for='url') url: 
+          input(type='text', name='url')
+        button(type='submit') add article

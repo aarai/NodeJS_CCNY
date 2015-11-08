@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  .row
+   .medium-12.columns
+      h1= title
+      p Welcome to #{title}
+  
+  .row
+   .medium-12.columns
+      p Title: #{article.title}
+      p Text: #{article.text}
+      p Url: #{article.url}
+      p
+        a(href='/articles/edit/#{article.id}') edit article
+      p
+        a(href='/articles/delete/#{article.id}') delete article
+      p
+        a(href='/articles') back to articles

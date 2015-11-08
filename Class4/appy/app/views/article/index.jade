@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+  .row
+   .medium-12.columns
+      h1= title
+      p Welcome to #{title}
+  
+  .row
+    each article in articles
+     .medium-12.columns
+        p Title: #{article.title}
+        p Text: #{article.text}
+        p Url: #{article.url}
+        p
+          a(href='/articles/show/#{article.id}') show
+    
+  .row
+   .medium-12.columns
+      p
+        a(href='/articles/new') New Article
+      p
+        a(href='/') Home
