@@ -5,6 +5,9 @@ body {
 a {
   color: #00B7FF;
 }
-.article {
-  margin: 30px 0;
+.columns.article {
+  margin: 15px 0;
+}
+.columns p {
+  margin: 0;
 }
