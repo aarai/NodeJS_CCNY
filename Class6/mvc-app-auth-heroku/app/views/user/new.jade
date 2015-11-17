@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  
+  form(action='/register', id='reg-form', method='post')
+    .form-group
+        label(for='username') Username:
+        input(type='text', class='form-control', name='username')
+    .form-group
+        label(for='password') Password:
+        input(type='password', class='form-control', name='password')
+    .form-group
+        label(for='confirm') Password Confirm:
+        input(type='password', class='form-control', name='confirm')
+    .form-group
+      button(type='submit', class='btn btn-primary') Submit
+      
+  

@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  
+  .row
+    ul.article
+      li Title: #{article.title}
+      li Text: #{article.text}
+      li Url: #{article.url}
+      
+  .row
+    a(href='/articles') back to articles
+    br
+    a(href='/articles/edit/#{article.id}') edit
+    br
+    a(href='/articles/delete/#{article.id}') delete

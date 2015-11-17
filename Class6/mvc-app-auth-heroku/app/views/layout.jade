@@ -1,0 +1,21 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width')
+    title= title
+    block css
+      link(rel='stylesheet', href='/css/style.css')
+    block js
+    
+  body
+    nav
+      if !login
+        a(href='/login') login
+      else
+        a(href='/logout') logout
+      
+      br
+      a(href='/register') register
+    
+    block content

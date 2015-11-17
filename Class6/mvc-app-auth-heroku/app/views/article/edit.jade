@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  
+  form(action='/articles/update', method='post')
+    .field
+      label(for='title') title:
+      input(type='text', name='title', value="#{article.title}")
+    .field
+      label(for='text') text:
+      input(type='text', name='text', value="#{article.text}")
+    .field
+      label(for='url') url:
+      input(type='text', name='url', value="#{article.url}")
+      input(type='hidden', name='id', value="#{article.id}")
+    button(type='submit') update article

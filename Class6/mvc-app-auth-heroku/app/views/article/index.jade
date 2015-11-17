@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  
+  .row
+    each article in articles
+      ul.article
+        li Title: #{article.title}
+        li Text: #{article.text}
+        li Url: #{article.url}
+        li
+          a(href='/articles/show/#{article.id}') show
+          
+  .row
+    a(href='/articles/new') new article

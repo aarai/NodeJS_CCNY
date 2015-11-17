@@ -18,8 +18,8 @@ gulp.task('babel', function() {
         .pipe(babel({
             presets: ['babel-preset-es2015']
         }))
-        .pipe(gulp.dest('public/build/js'))
-        .pipe(livereload());
+        .pipe(gulp.dest('public/build/js'));
+        livereload();
 });
 
 gulp.task('start', function () {

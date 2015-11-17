@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  
+  form(action='/articles/create', method='POST')
+    .field
+      label(for='title') title:
+      input(type='text', name='title')
+    .field
+      label(for='text') text:
+      input(type='text', name='text')
+    .field
+      label(for='url') url:
+      input(type='text', name='url')
+    button(type='submit') add article
+      
+  
